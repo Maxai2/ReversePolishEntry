@@ -18,19 +18,21 @@ void main()
 			numbers.push((int)math[index] - 48);
 		else
 		{
-			if (((int)operators.peek() == 42 || (int)operators.peek() == 47) && ((int)math[index] == 43 || (int)math[index] == 45))
+			if (((int)operators.peek() == '*' || (int)operators.peek() == '/') && ((int)math[index] == '-' || (int)math[index] == '+'))
 			{
-				if ((int)operators.peek() == 42) // *
+				if ((int)operators.peek() == '*') // *
 				{
 					ans = numbers.pop();
 					ans *= numbers.pop();
 					operators.pop();
 				}
 				else
-				if ((int)operators.peek() == 47) // /
+				if ((int)operators.peek() == '/') // /
 				{
 					ans = numbers.pop();
-					ans /= numbers.pop();
+					temp = ans;
+					ans = numbers.pop();
+					ans /= temp;
 					operators.pop();
 				}
 
