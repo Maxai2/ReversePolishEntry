@@ -8,7 +8,7 @@ void main()
 	Stack<int> numbers(100);
 	Stack<char> operators(100);
 
-	string math = "4*3*3*3-6*7*5+6-6/3+5-2/2";
+	string math = "4*3*3*3-6*7*5+6-6/3+5-2/2+1";
 
 	int index = 0, ans = 0, temp = 0;
 	char cTemp;
